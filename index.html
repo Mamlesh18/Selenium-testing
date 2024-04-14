@@ -70,6 +70,7 @@
             <input type="submit" value="Login">
         </div>
     </form>
+    <div id="loginMessage" style="display: none; text-align: center; color: green;">Login successful!</div>
 </div>
 
 <script>
@@ -80,8 +81,8 @@
         
         // Check if username and password match
         if (username === "user" && password === "password") {
-            // Redirect to another page
-            window.location.href = "success.html";
+            // Display success message
+            document.getElementById("loginMessage").style.display = "block";
         } else {
             alert("Invalid username or password. Please try again.");
         }
